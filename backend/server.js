@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const multer = require('multer');
-const path = require('path');
 const fs = require('fs');
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
@@ -13,7 +12,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Use a temporary directory instead of "uploads/"
+// Use `/tmp/` because Vercel does not allow writing to other folders
 const uploadPath = '/tmp/uploads/';
 if (!fs.existsSync(uploadPath)) {
   fs.mkdirSync(uploadPath, { recursive: true });
@@ -25,7 +24,6 @@ const storage = multer.diskStorage({
     cb(null, file.originalname);
   },
 });
-
 const upload = multer({ storage: storage });
 
 const transporter = nodemailer.createTransport({
@@ -44,8 +42,6 @@ app.post('/api/submit-form', upload.single('resume'), (req, res) => {
     return res.status(400).json({ message: 'Resume file is required' });
   }
 
-  console.log('Received Form:', { name, number, email, subject, message, resume });
-
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,
@@ -59,10 +55,9 @@ app.post('/api/submit-form', upload.single('resume'), (req, res) => {
       console.error('Error sending email:', error.message);
       return res.status(500).json({ message: 'Error sending email', error: error.message });
     }
-    console.log('Email sent:', info.response);
     res.json({ message: 'Form submitted and email sent successfully!' });
   });
 });
 
-// Export the app instead of using app.listen()
+// Export app instead of using app.listen()
 module.exports = app;
