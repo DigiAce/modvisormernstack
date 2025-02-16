@@ -8,9 +8,24 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
-app.use(cors());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+
+// ✅ Allow your frontend domain to access the backend
+app.use(cors({
+  origin: 'https://www.modvisorconsultants.com', // Change this to match your frontend domain
+  methods: 'GET,POST,OPTIONS',
+  allowedHeaders: 'Content-Type,Authorization'
+}));
+
+// ✅ Handle CORS Preflight Requests
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://www.modvisorconsultants.com');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+  next();
+});
 
 // Use `/tmp/` because Vercel does not allow writing to other folders
 const uploadPath = '/tmp/uploads/';
