@@ -116,7 +116,7 @@ const Discription = () => {
       </button>
 
       {showForm && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-10">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-10 mt-20">
           <div className="bg-white p-8 rounded-2xl shadow-lg max-w-lg w-full relative">
             <button
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
