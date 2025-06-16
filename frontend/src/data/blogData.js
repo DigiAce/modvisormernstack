@@ -21,7 +21,7 @@ const blogData = [
       description:
         "Ensure your financial model is ready for launch with this comprehensive checklist. From technical fine-tuning and error-proofing to style and presentation, follow these steps to eliminate common issues, boost accuracy, and present a model that reflects your expertise and professionalism.",
       image:
-        "/img/blogimg/fast_logo.png",
+        "/img/blogimg/chicklist.png",
         link: "/blog/full/2", // Link to the full blog post (route to BlogFullPage).
     },
     {
@@ -33,7 +33,7 @@ const blogData = [
       description:
         "Explore how AI is transforming financial modelling and whether it will replace human modellers. Learn about the collaborative future where AI handles data processing while humans focus on strategic insight, business understanding, and customized solutions.",
       image:
-        "/img/blogimg/ai_finance.jpg",
+        "/img/blogimg/chicklist.png",
         link: "/blog/full/3", // Link to the full blog post (route to BlogFullPage).
     },
     // {
