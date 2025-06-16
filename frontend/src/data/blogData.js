@@ -24,18 +24,18 @@ const blogData = [
         "/img/blogimg/checklist.jpg",
         link: "/blog/full/2", // Link to the full blog post (route to BlogFullPage).
     },
-    // {
-    //   id: 3,
-    //   date: "2022-10-10",
-    //   year: "2022",
-    //   day: "Oct 10",
-    //   title: "Finding the right guitar for your style - 5 tips",
-    //   description:
-    //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque dignissimos. Molestias explicabo corporis voluptatem?",
-    //   image:
-    //     "https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
-    //     link: "/blog/full/3", // Link to the full blog post (route to BlogFullPage).
-    // },
+    {
+      id: 3,
+      date: "2025-02-15",
+      year: "2025",
+      day: "Feb 15",
+      title: "Will AI Replace Financial Modellers in the Future?",
+      description:
+        "Explore how AI is transforming financial modelling and whether it will replace human modellers. Learn about the collaborative future where AI handles data processing while humans focus on strategic insight, business understanding, and customized solutions.",
+      image:
+        "/img/blogimg/ai_finance.jpg",
+        link: "/blog/full/3", // Link to the full blog post (route to BlogFullPage).
+    },
     // {
     //   id: 4,
     //   date: "2022-10-10",
@@ -65,4 +65,3 @@ const blogData = [
   ];
   
   export default blogData;
-  
