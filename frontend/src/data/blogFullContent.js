@@ -158,7 +158,7 @@ const blogDataFull = [
         closing: "This partnership will lead to faster, more accurate, and more valuable models."
       }
     ],
-    bannerImageUrl: "/img/blogimg/ai_finance_banner.jpg",
+    bannerImageUrl: "/img/blogimg/blog-2.jpg",
     conclusion: {
       heading: "Conclusion",
       description: "AI is not here to replace financial modellers. It is here to assist and improve the quality of their work. The future of Financial Modelling belongs to professionals who combine technical expertise with the smart use of AI. Need a model that blends precision with practical insight? We're here to help."
