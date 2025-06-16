@@ -21,7 +21,7 @@ const blogData = [
       description:
         "Ensure your financial model is ready for launch with this comprehensive checklist. From technical fine-tuning and error-proofing to style and presentation, follow these steps to eliminate common issues, boost accuracy, and present a model that reflects your expertise and professionalism.",
       image:
-        "/img/blogimg/checklist.jpg",
+        "/img/blogimg/fast_logo.png",
         link: "/blog/full/2", // Link to the full blog post (route to BlogFullPage).
     },
     {
